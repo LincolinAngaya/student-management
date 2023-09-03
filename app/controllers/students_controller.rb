@@ -17,6 +17,8 @@ class StudentsController < ApplicationController
             last_name: params[:student][last_name],
             email: params[:student][email]
         )
+
+        @student.save
     end
 
   end
