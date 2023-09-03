@@ -24,17 +24,16 @@ class StudentsController < ApplicationController
         @student = Student.new(student_params)
       
         if @student.save
-          redirect_to students_path, notice: 'Student was successfully created.'
+          redirect_to students_path
         else
           render 'new'
         end
-      end
+    end
 
       private
 
-     def student_params
+      def student_params
         params.require(:student).permit(:first_name, :last_name, :email)
-
       end
   end
   
