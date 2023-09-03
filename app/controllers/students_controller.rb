@@ -1,3 +1,11 @@
+# app/controllers/students_controller.rb
+
 class StudentsController < ApplicationController
 
-end
+    def index
+      @students = Student.all
+    #   render 'index' 
+    end
+
+  end
+  

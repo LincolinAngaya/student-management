@@ -1,5 +1,6 @@
+# app/models/student.rb
+
 class Student < ApplicationRecord
-    def index 
-        @students = Student.all
-    end
-end
+    # Your model code here
+  end
+  
