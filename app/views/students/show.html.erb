@@ -1,0 +1,16 @@
+<!-- app/views/students/show.html.erb -->
+
+<h1>Student Details</h1>
+
+<dl>
+  <dt>First Name:</dt>
+  <dd><%= @student.first_name %></dd>
+
+  <dt>Last Name:</dt>
+  <dd><%= @student.last_name %></dd>
+
+  <dt>Email:</dt>
+  <dd><%= @student.email %></dd>
+</dl>
+
+<%= link_to 'Back', students_path %>
