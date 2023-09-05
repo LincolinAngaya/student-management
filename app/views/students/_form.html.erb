@@ -2,7 +2,7 @@
 
 <!-- app/views/students/new.html.erb -->
 
-<%= form_with model: @student do |form| %>
+<%= form_with model: student do |form| %>
 
   <% if @student.errors.any? %>
   <% @student.errors.full_messages.each do |message| %>
@@ -10,14 +10,18 @@
     <% end %>
   <% end %>
 
-    <div class="alert alert-danger">
+    <%
+=begin%>
+ <div class="alert alert-danger">
       <ul>
         <% @student.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
     </div>
-  <% end %>
+  <% end %> 
+<%
+=end%>
 
   <div class="field">
     <%= form.label :first_name %>
