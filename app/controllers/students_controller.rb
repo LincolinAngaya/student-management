@@ -34,7 +34,10 @@ class StudentsController < ApplicationController
          def destroy 
           
             @student.destroy
-            redirect_to students_path, notice: 'student has been deleted succesfully'
+            respond_to do |format|
+              format.html { redirect_to courses_url, notice: "Course was successfully destroyed." }
+              format.json { head :no_content }
+            end
         end
 
 
