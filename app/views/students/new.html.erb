@@ -1,9 +1,13 @@
 <h1>New Student</h1>
+
+
+ 
 <%
 =begin%>
- 
-<%= render "form", student: @student %> 
+ <%= render "form", student: @student %>  
 <%
 =end%>
+
+
 
 <%= render  partial: "form", locals: { student: @student } %>
